@@ -1,0 +1,39 @@
+.side-panel {
+  background-color: #fff;
+  box-sizing: border-box;
+  box-shadow: 8px 0 0 rgba(0, 0, 0, .14);
+  height: 100%;
+  left: 0;
+  padding: 40px;
+  position: fixed;
+  top: 0;
+  width: 420px;
+}
+
+.main-heading {
+  margin-bottom: 40px;
+}
+
+.main-heading > h1 {
+  font-size: 1.143rem;
+  margin-bottom: 20px;
+  margin-top: 0;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.main-heading__logo {
+  color: #b2b2b2;
+  height: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 16px;
+}
+
+.main-heading__logo > svg {
+  display: inline-block;
+  fill: currentColor;
+  height: 100%;
+  width: 100%;
+}
