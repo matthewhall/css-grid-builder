@@ -1,14 +1,1 @@
-.node-list {
-  display: grid;
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
-  grid-template-columns: repeat(12, 1fr);
 
-  > div {
-    background-color: rgba($color-white, .2);
-    border-radius: 3px;
-    color: $color-white;
-    padding: 10px;
-    text-align: center;
-  }
-}
