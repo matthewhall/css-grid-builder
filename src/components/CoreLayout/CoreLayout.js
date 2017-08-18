@@ -8,7 +8,9 @@ class CoreLayout extends Component {
     return (
       <main className="main">
         <SidePanel />
-        <NodeList />
+        <div className="main-content">
+          <NodeList />
+        </div>
       </main>
     );
   }

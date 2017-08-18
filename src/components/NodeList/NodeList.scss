@@ -1,7 +1,6 @@
 .node-list {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  margin-left: 420px;
   padding: 40px 40px 40px 50px;
 
   &__node,
