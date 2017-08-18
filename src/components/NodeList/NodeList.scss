@@ -1,4 +1,30 @@
 .node-list {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
   margin-left: 420px;
   padding: 40px 40px 40px 50px;
+
+  &__node,
+  &__add-node {
+    background-color: rgba(255, 255, 255, .12);
+    border-radius: 3px;
+    color: rgba(255, 255, 255, .84);
+    padding: 10px;
+    text-align: center;
+    transition: background-color .2s linear;
+
+    &:hover,
+    &:focus {
+      background-color: rgba(255, 255, 255, .24);
+    }
+  }
+
+  &__add-node {
+    border: 0;
+    cursor: pointer;
+    font-family: 'Montserrat', 'Open Sans', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 6px;
+  }
 }
