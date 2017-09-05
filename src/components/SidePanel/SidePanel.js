@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import CoreSettings from '../../components/CoreSettings';
 import './SidePanel.scss';
 
 class SidePanel extends Component {
@@ -18,6 +19,8 @@ class SidePanel extends Component {
           <li><small><a href="http://caniuse.com/#feat=css-grid">Can I Use: CSS Grid Layout</a></small></li>
           <li><small><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout">Mozilla: CSS Grid Layout</a></small></li>
         </ul>
+
+        <CoreSettings />
       </section>
     )
   }
