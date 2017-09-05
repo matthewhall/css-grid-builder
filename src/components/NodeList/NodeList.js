@@ -3,26 +3,36 @@ import Node from '../../components/Node';
 import './NodeList.scss';
 
 class NodeList extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       nodes: []
     };
 
     this.state.nodes.push({
-      text: 'div'
+      text: 'div',
+      id: Date.now()
     });
   }
 
   handleAddNodeClick() {
-    let state = this.state;
+    let index = this.state.nodes.length;
 
-    state.nodes.push({
-      text: 'div'
+    this.addNodeAt(index);
+  }
+
+  addNodeAt(index) {
+    let nodes = this.state.nodes;
+
+    nodes.splice(index, 0, {
+      text: 'div',
+      id: Date.now()
     });
 
-    this.setState(state);
+    this.setState({
+      nodes: nodes
+    });
   }
 
   render() {
@@ -31,7 +41,7 @@ class NodeList extends Component {
     return (
       <div className="node-list">
         {this.state.nodes.map((node, index) => (
-          <Node key={index} text={node.text} />
+          <Node key={node.id.toString()} text={node.text} />
         ))}
         <button onClick={() => this.handleAddNodeClick()} className="node-list__add-node" aria-label={addNodeText} title={addNodeText}>+</button>
       </div>
