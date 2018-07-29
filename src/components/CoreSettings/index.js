@@ -1,3 +1,3 @@
-import CoreSettings from './CoreSettings';
+import CoreSettingsContainer from './CoreSettingsContainer';
 
-export default CoreSettings;
+export default CoreSettingsContainer;

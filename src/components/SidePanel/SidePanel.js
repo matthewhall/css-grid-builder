@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import AboutInfo from '../AboutInfo';
-import CoreSettings from '../CoreSettings';
+import CoreSettingsContainer from '../CoreSettings';
 import ReferenceInfo from '../ReferenceInfo';
 
 import './SidePanel.scss';
@@ -16,7 +16,7 @@ class SidePanel extends Component {
 
           </div>
         </header>
-        <CoreSettings />
+        <CoreSettingsContainer />
         <AboutInfo />
         <ReferenceInfo />
       </section>

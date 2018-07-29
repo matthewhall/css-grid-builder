@@ -1,3 +1,3 @@
-import NodeList from './NodeList';
+import NodeListContainer from './NodeListContainer';
 
-export default NodeList;
+export default NodeListContainer;

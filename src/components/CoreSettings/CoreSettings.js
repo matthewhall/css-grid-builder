@@ -3,17 +3,29 @@ import React, { Component } from 'react';
 import './CoreSettings.scss';
 
 class CoreSettings extends Component {
+  handleEnabledChange(event) {
+    let value;
+
+    if (event.target.checked) {
+      value = 'grid';
+    } else {
+      value = 'block';
+    }
+
+    this.props.setNodeListDisplayStyle(value);
+  }
+
   render() {
     return (
       <div className="settings">
         <h2>Settings</h2>
         <form>
-          <input type="radio" name="display-type" id="display-type-grid" value="grid" defaultChecked={true} />
-          <label htmlFor="display-type-grid">Grid</label>
-          <input type="radio" name="display-type" id="display-type-block" value="block" />
-          <label htmlFor="display-type-block">Block</label>
-          <input type="radio" name="display-type" id="display-type-inline" value="inline" />
-          <label htmlFor="display-type-inline">Inline</label>
+          <input type="checkbox"
+              name="display-type"
+              id="display-type-grid"
+              checked={this.props.settings.display === 'grid'}
+              onChange={($event) => this.handleEnabledChange($event)} />
+          <label htmlFor="display-type-grid">Enabled</label>
         </form>
       </div>
     );
