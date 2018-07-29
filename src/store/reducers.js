@@ -32,10 +32,12 @@ const settings = (state = initialState.settings, action) => {
 const nodes = (state = initialState.nodes, action) => {
   switch (action.type) {
     case ADD_NODE_AT_INDEX:
+      let index = action.nodeData.index;
+
       return [
-        ...state.slice(0, action.nodeData.index),
+        ...state.slice(0, index),
         action.nodeData.node,
-        ...state.slice(action.nodeData.index + 1)
+        ...state.slice(index + 1)
       ];
 
     default:
