@@ -1,35 +1,19 @@
 import React, { Component } from 'react';
-import Node from '../../components/Node';
+
+import Node from '../Node';
 
 import './NodeList.scss';
 
 class NodeList extends Component {
-  constructor(props) {
-    super(props);
-
-    console.log(props);
-  }
-
   handleAddNodeClick() {
-    // let index = this.state.nodes.length;
+    const index = this.props.nodes.length + 1;
 
-    // this.addNodeAt(index);
-    this.props.addNode({
-      text: 'div',
-      id: this.props.nodes.length + 1
-    });
-  }
-
-  addNodeAt(index) {
-    let nodes = this.state.nodes;
-
-    nodes.splice(index, 0, {
-      text: 'div',
-      id: Date.now()
-    });
-
-    this.setState({
-      nodes: nodes
+    this.props.addNodeAtIndex({
+      index: index - 1,
+      node: {
+        text: 'div',
+        id: Date.now()
+      }
     });
   }
 

@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 
 import NodeList from './NodeList';
 
-import { addNode } from '@/store/actions';
+import { addNodeAtIndex } from '@/store/actions';
 
 const mapStateToProps = (state) => ({
   nodes: state.nodes,
@@ -10,7 +10,7 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = (dispatch) => ({
-  addNode: (node) => dispatch(addNode(node))
+  addNodeAtIndex: (nodeData) => dispatch(addNodeAtIndex(nodeData))
 })
 
 export default connect(

@@ -1,12 +1,12 @@
 import {
-  ADD_NODE,
+  ADD_NODE_AT_INDEX,
   SET_SETTINGS_DISPLAY_VALUE
 } from './actionTypes';
 
 export const setSettingsDisplayValue = (value) => {
-  return { type: SET_SETTINGS_DISPLAY_VALUE, value: value };
+  return { type: SET_SETTINGS_DISPLAY_VALUE, value };
 }
 
-export const addNode = (node) => {
-  return { type: ADD_NODE, node: node };
+export const addNodeAtIndex = (nodeData) => {
+  return { type: ADD_NODE_AT_INDEX, nodeData };
 }
