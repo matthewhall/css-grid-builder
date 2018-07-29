@@ -14,6 +14,9 @@ const config = {
     path: path.resolve(__dirname, './public')
   },
   resolve: {
+    alias: {
+      '@': `${__dirname}/src/`
+    },
     extensions: ['.js', '.jsx', '.json']
   },
   module: {
