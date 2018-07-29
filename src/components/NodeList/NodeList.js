@@ -7,22 +7,17 @@ class NodeList extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      nodes: []
-    };
-
-    this.state.nodes.push({
-      text: 'div',
-      id: Date.now()
-    });
-
     console.log(props);
   }
 
   handleAddNodeClick() {
-    let index = this.state.nodes.length;
+    // let index = this.state.nodes.length;
 
-    this.addNodeAt(index);
+    // this.addNodeAt(index);
+    this.props.addNode({
+      text: 'div',
+      id: this.props.nodes.length + 1
+    });
   }
 
   addNodeAt(index) {
@@ -43,10 +38,13 @@ class NodeList extends Component {
 
     return (
       <div className="node-list" style={{'display': this.props.settings.display}}>
-        {this.state.nodes.map((node, index) => (
+        {this.props.nodes.map((node, index) => (
           <Node key={node.id.toString()} text={node.text} />
         ))}
-        <button onClick={() => this.handleAddNodeClick()} className="node-list__add-node" aria-label={addNodeText} title={addNodeText}>+</button>
+        <button onClick={() => this.handleAddNodeClick()}
+            className="node-list__add-node"
+            aria-label={addNodeText}
+            title={addNodeText}>+</button>
       </div>
     );
   }
