@@ -23,7 +23,8 @@ class NodeList extends Component {
     return (
       <div className="node-list" style={{'display': this.props.settings.display}}>
         {this.props.nodes.map((node, index) => (
-          <Node key={node.id.toString()} text={node.text} />
+          <Node key={node.id.toString()}
+              text={node.text} />
         ))}
         <button onClick={() => this.handleAddNodeClick()}
             className="node-list__add-node"

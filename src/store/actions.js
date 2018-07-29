@@ -10,3 +10,7 @@ export const setSettingsDisplayValue = (value) => {
 export const addNodeAtIndex = (nodeData) => {
   return { type: ADD_NODE_AT_INDEX, nodeData };
 }
+
+export const removeNodeAtIndex = (index) => {
+  return { type: REMOVE_NODE_AT_INDEX, index };
+}

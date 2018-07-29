@@ -2,6 +2,7 @@ import { combineReducers } from 'redux';
 
 import {
   ADD_NODE_AT_INDEX,
+  REMOVE_NODE_AT_INDEX,
   SET_SETTINGS_DISPLAY_VALUE
 } from './actionTypes';
 
@@ -32,12 +33,16 @@ const settings = (state = initialState.settings, action) => {
 const nodes = (state = initialState.nodes, action) => {
   switch (action.type) {
     case ADD_NODE_AT_INDEX:
-      let index = action.nodeData.index;
-
       return [
-        ...state.slice(0, index),
+        ...state.slice(0, action.nodeData.index),
         action.nodeData.node,
-        ...state.slice(index + 1)
+        ...state.slice(action.nodeData.index + 1)
+      ];
+
+    case REMOVE_NODE_AT_INDEX:
+      return [
+        ...state.slice(0, action.index),
+        ...state.slice(action.index + 1)
       ];
 
     default:
