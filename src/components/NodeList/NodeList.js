@@ -21,7 +21,7 @@ class NodeList extends Component {
     let addNodeText = 'Add new node';
 
     return (
-      <div className="node-list" style={{'display': this.props.settings.display}}>
+      <div className="node-list" style={this.props.settings}>
         {this.props.nodes.map((node, index) => (
           <Node key={node.id.toString()}
               text={node.text} />

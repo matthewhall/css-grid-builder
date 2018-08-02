@@ -3,12 +3,16 @@ import { combineReducers } from 'redux';
 import {
   ADD_NODE_AT_INDEX,
   REMOVE_NODE_AT_INDEX,
-  SET_SETTINGS_DISPLAY_VALUE
+  SET_SETTINGS_DISPLAY_VALUE,
+  SET_CORE_GRID_SETTINGS_CSS_VALUES
 } from './actionTypes';
 
 const initialState = {
   settings: {
-    display: 'grid'
+    'display': 'grid',
+    'gridGap': '10px',
+    'gridTemplateColumns': '',
+    'gridTemplateRows': ''
   },
   nodes: [
     {
@@ -22,8 +26,11 @@ const settings = (state = initialState.settings, action) => {
   switch (action.type) {
     case SET_SETTINGS_DISPLAY_VALUE:
       return Object.assign({}, state, {
-        display: action.value
+        'display': action.value
       });
+
+    case SET_CORE_GRID_SETTINGS_CSS_VALUES:
+      return Object.assign({}, state, action.values);
 
     default:
       return state;
