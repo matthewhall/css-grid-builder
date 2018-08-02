@@ -10,9 +10,15 @@ import {
 const initialState = {
   settings: {
     'display': 'grid',
-    'gridGap': '10px',
+    'gridColumnGap': '10px',
+    'gridRowGap': '10px',
     'gridTemplateColumns': '',
-    'gridTemplateRows': ''
+    'gridTemplateRows': '',
+    'gridTemplateAreas': '',
+    'justifyItems': '',
+    'alignItems': '',
+    'justifyContent': '',
+    'alignContent': ''
   },
   nodes: [
     {
