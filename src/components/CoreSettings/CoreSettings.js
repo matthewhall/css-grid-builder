@@ -1,8 +1,15 @@
 import React, { Component } from 'react';
+import CoreSettingsField from './CoreSettingsField';
 
 import './CoreSettings.scss';
 
 class CoreSettings extends Component {
+  constructor(props) {
+    super(props);
+
+    this.handleCoreSettingsChange = this.handleCoreSettingsChange.bind(this);
+  }
+
   handleEnabledChange(event) {
     let value;
 
@@ -41,86 +48,68 @@ class CoreSettings extends Component {
           </div>
 
           <fieldset ref="coreSettings">
-            <div className="field">
-              <label htmlFor="grid-column-gap">Grid column gap</label>
-              <input type="text"
-                  name="gridColumnGap"
-                  id="grid-column-gap"
-                  onChange={($event) => this.handleCoreSettingsChange($event)}
-                  value={this.props.settings['gridColumnGap']} />
-            </div>
+            <CoreSettingsField id="grid-column-gap"
+                label="Grid Column Gap"
+                name="gridColumnGap"
+                type="text"
+                value={this.props.settings['gridColumnGap']}
+                onChange={this.handleCoreSettingsChange} />
 
-            <div className="field">
-              <label htmlFor="grid-row-gap">Grid row gap</label>
-              <input type="text"
-                  name="gridRowGap"
-                  id="grid-row-gap"
-                  onChange={($event) => this.handleCoreSettingsChange($event)}
-                  value={this.props.settings['gridRowGap']} />
-            </div>
+            <CoreSettingsField id="grid-row-gap"
+                label="Grid Row Gap"
+                name="gridRowGap"
+                type="text"
+                value={this.props.settings['gridRowGap']}
+                onChange={this.handleCoreSettingsChange} />
 
-            <div className="field">
-              <label htmlFor="grid-template-columns">Grid template columns</label>
-              <input type="text"
-                  name="gridTemplateColumns"
-                  id="grid-template-columns"
-                  onChange={($event) => this.handleCoreSettingsChange($event)}
-                  value={this.props.settings['gridTemplateColumns']} />
-            </div>
+            <CoreSettingsField id="grid-template-columns"
+                label="Grid template columns"
+                name="gridTemplateColumns"
+                type="text"
+                value={this.props.settings['gridTemplateColumns']}
+                onChange={this.handleCoreSettingsChange} />
 
-            <div className="field">
-              <label htmlFor="grid-template-rows">Grid template rows</label>
-              <input type="text"
-                  name="gridTemplateRows"
-                  id="grid-template-rows"
-                  onChange={($event) => this.handleCoreSettingsChange($event)}
-                  value={this.props.settings['gridTemplateRows']} />
-            </div>
+            <CoreSettingsField id="grid-template-rows"
+                label="Grid template rows"
+                name="gridTemplateRows"
+                type="text"
+                value={this.props.settings['gridTemplateRows']}
+                onChange={this.handleCoreSettingsChange} />
 
-            <div className="field">
-              <label htmlFor="grid-template-areas">Grid template areas</label>
-              <input type="text"
-                  name="gridTemplateAreas"
-                  id="grid-template-areas"
-                  onChange={($event) => this.handleCoreSettingsChange($event)}
-                  value={this.props.settings['gridTemplateAreas']} />
-            </div>
+            <CoreSettingsField id="grid-template-areas"
+                label="Grid template areas"
+                name="gridTemplateAreas"
+                type="text"
+                value={this.props.settings['gridTemplateAreas']}
+                onChange={this.handleCoreSettingsChange} />
 
-            <div className="field">
-              <label htmlFor="justify-items">Justify items</label>
-              <input type="text"
-                  name="justifyItems"
-                  id="justify-items"
-                  onChange={($event) => this.handleCoreSettingsChange($event)}
-                  value={this.props.settings['justifyItems']} />
-            </div>
+            <CoreSettingsField id="justify-items"
+                label="Justify items"
+                name="justifyItems"
+                type="text"
+                value={this.props.settings['justifyItems']}
+                onChange={this.handleCoreSettingsChange} />
 
-            <div className="field">
-              <label htmlFor="align-items">Align items</label>
-              <input type="text"
-                  name="alignItems"
-                  id="align-items"
-                  onChange={($event) => this.handleCoreSettingsChange($event)}
-                  value={this.props.settings['alignItems']} />
-            </div>
+            <CoreSettingsField id="align-items"
+                label="Align items"
+                name="alignItems"
+                type="text"
+                value={this.props.settings['alignItems']}
+                onChange={this.handleCoreSettingsChange} />
 
-            <div className="field">
-              <label htmlFor="justify-content">Justify content</label>
-              <input type="text"
-                  name="justifyContent"
-                  id="justify-content"
-                  onChange={($event) => this.handleCoreSettingsChange($event)}
-                  value={this.props.settings['justifyContent']} />
-            </div>
+            <CoreSettingsField id="justify-content"
+                label="Justify content"
+                name="justifyContent"
+                type="text"
+                value={this.props.settings['justifyContent']}
+                onChange={this.handleCoreSettingsChange} />
 
-            <div className="field">
-              <label htmlFor="align-content">Align content</label>
-              <input type="text"
-                  name="alignContent"
-                  id="align-content"
-                  onChange={($event) => this.handleCoreSettingsChange($event)}
-                  value={this.props.settings['alignContent']} />
-            </div>
+            <CoreSettingsField id="align-content"
+                label="Align content"
+                name="alignContent"
+                type="text"
+                value={this.props.settings['alignContent']}
+                onChange={this.handleCoreSettingsChange} />
           </fieldset>
         </form>
       </div>
