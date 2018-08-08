@@ -7,10 +7,15 @@ import App from './App';
 
 import reducers from './store/reducers';
 
+import FocusControl from './utils/FocusControl';
+
 import './index.scss';
 // import registerServiceWorker from './registerServiceWorker';
 
 const store = createStore(reducers);
+const utils = {
+  focusControl: new FocusControl()
+};
 
 ReactDOM.render(
   <Provider store={store}>
