@@ -7,5 +7,40 @@ fieldset {
 input,
 textarea {
   font-family: inherit;
-  font-size: inherit;
+  font-size: 12px;
+}
+
+label {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.field {
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  > label {
+    margin-bottom: 5px;
+  }
+
+  > input[type='text'],
+  > input[type='number'] {
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    display: block;
+    padding: 4px;
+    width: 100%;
+  }
+
+  &--inline {
+    > label {
+      margin-bottom: 0;
+      margin-left: 5px;
+    }
+  }
 }

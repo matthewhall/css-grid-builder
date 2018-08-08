@@ -31,7 +31,7 @@ class CoreSettings extends Component {
       <div className="settings">
         <h2>Settings</h2>
         <form>
-          <div className="field">
+          <div className="field field--inline">
             <input type="checkbox"
                 name="display-type"
                 id="display-type-grid"
