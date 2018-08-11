@@ -21,7 +21,9 @@
   }
 
   &__node {
+    cursor: default;
     position: relative;
+    user-select: none;
 
     &:hover,
     &:focus {
@@ -32,9 +34,10 @@
   }
 
   &__node-delete-button {
-    background-color: #fff;
+    background-color: $color-white;
     border-radius: 50%;
     border: 0;
+    color: rgba(0, 0, 0, .75);
     cursor: pointer;
     font-family: $font-family-secondary;
     font-size: 12px;
@@ -45,6 +48,7 @@
     position: absolute;
     right: -6px;
     top: -6px;
+    text-align: center;
     transform: rotate(45deg);
     transition: opacity .2s;
     width: 15px;
