@@ -5,6 +5,13 @@ import Node from '../Node';
 import './NodeList.scss';
 
 class NodeList extends Component {
+  constructor(props) {
+    super(props);
+
+    this.handleNodeClick = this.handleNodeClick.bind(this);
+    this.handleNodeDeleteClick = this.handleNodeDeleteClick.bind(this);
+  }
+
   handleAddNodeClick() {
     const index = this.props.nodes.length + 1;
 
@@ -17,6 +24,15 @@ class NodeList extends Component {
     });
   }
 
+  handleNodeClick() {
+    console.log('node click');
+  }
+
+  handleNodeDeleteClick(event) {
+    event.stopPropagation();
+    console.log('node delete click');
+  }
+
   render() {
     let addNodeText = 'Add new node';
 
@@ -24,7 +40,9 @@ class NodeList extends Component {
       <div className="node-list" style={this.props.settings}>
         {this.props.nodes.map((node, index) => (
           <Node key={node.id.toString()}
-              text={node.text} />
+              text={node.text}
+              onClick={this.handleNodeClick}
+              onDeleteButtonClick={this.handleNodeDeleteClick} />
         ))}
         <button onClick={() => this.handleAddNodeClick()}
             className="node-list__add-node"

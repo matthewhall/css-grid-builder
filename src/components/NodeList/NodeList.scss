@@ -1,4 +1,6 @@
 .node-list {
+  $base: &;
+
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   padding: 40px 40px 40px 50px;
@@ -18,10 +20,40 @@
     }
   }
 
+  &__node {
+    position: relative;
+
+    &:hover,
+    &:focus {
+      #{$base}__node-delete-button {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__node-delete-button {
+    background-color: #fff;
+    border-radius: 50%;
+    border: 0;
+    cursor: pointer;
+    font-family: $font-family-secondary;
+    font-size: 12px;
+    font-weight: 700;
+    height: 15px;
+    opacity: 0;
+    padding: 0;
+    position: absolute;
+    right: -6px;
+    top: -6px;
+    transform: rotate(45deg);
+    transition: opacity .2s;
+    width: 15px;
+  }
+
   &__add-node {
     border: 0;
     cursor: pointer;
-    font-family: 'Montserrat', 'Open Sans', Arial, sans-serif;
+    font-family: $font-family-secondary;
     font-size: 20px;
     font-weight: 700;
     padding: 6px;
