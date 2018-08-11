@@ -14,9 +14,9 @@ class CoreSettings extends Component {
     let value;
 
     if (event.target.checked) {
-      value = 'grid';
+      value = 'inline-grid';
     } else {
-      value = 'block';
+      value = 'grid';
     }
 
     this.props.setNodeListDisplayStyle(value);
@@ -42,9 +42,9 @@ class CoreSettings extends Component {
             <input type="checkbox"
                 name="display-type"
                 id="display-type-grid"
-                checked={this.props.settings.display === 'grid'}
+                checked={this.props.settings.display === 'inline-grid'}
                 onChange={($event) => this.handleEnabledChange($event)} />
-            <label htmlFor="display-type-grid">Enabled</label>
+            <label htmlFor="display-type-grid">Inline grid?</label>
           </div>
 
           <fieldset ref="coreSettings">
