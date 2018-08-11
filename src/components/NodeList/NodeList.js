@@ -31,9 +31,7 @@ class NodeList extends Component {
   handleDeleteNodeClick(event, id) {
     event.stopPropagation();
 
-    const index = this.props.nodes.findIndex((node) => {
-      return node.id === id;
-    });
+    const index = this.props.nodes.findIndex((node) => node.id === id);
 
     this.props.removeNodeAtIndex(index);
   }
