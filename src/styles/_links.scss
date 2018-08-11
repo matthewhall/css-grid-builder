@@ -1,0 +1,10 @@
+a,
+a:visited {
+  color: $color-secondary-blue;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
