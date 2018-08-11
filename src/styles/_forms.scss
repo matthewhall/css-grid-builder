@@ -6,7 +6,8 @@ fieldset {
 
 input,
 textarea {
-  font-family: inherit;
+  color: inherit;
+  font-family: 'Overpass Mono', monospace;
   font-size: 12px;
 }
 
@@ -29,11 +30,12 @@ label {
   }
 
   > input[type='text'],
-  > input[type='number'] {
+  > input[type='number'],
+  > textarea {
     border: 1px solid #ccc;
     box-sizing: border-box;
     display: block;
-    padding: 4px;
+    padding: 6px;
     width: 100%;
   }
 
