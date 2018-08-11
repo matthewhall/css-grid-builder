@@ -9,6 +9,14 @@
   position: fixed;
   top: 0;
   width: 420px;
+
+  &__section {
+    margin-bottom: 40px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .main-heading {

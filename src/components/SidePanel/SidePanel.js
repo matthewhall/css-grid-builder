@@ -16,9 +16,15 @@ class SidePanel extends Component {
 
           </div>
         </header>
-        <CoreSettingsContainer />
-        <AboutInfo />
-        <ReferenceInfo />
+        <div className="side-panel__section">
+          <CoreSettingsContainer />
+        </div>
+        <div className="side-panel__section">
+          <AboutInfo />
+        </div>
+        <div className="side-panel__section">
+          <ReferenceInfo />
+        </div>
       </section>
     )
   }
