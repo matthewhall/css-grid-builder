@@ -7,26 +7,7 @@ import {
   SET_CORE_GRID_SETTINGS_CSS_VALUES
 } from './actionTypes';
 
-const initialState = {
-  settings: {
-    'display': 'grid',
-    'gridColumnGap': '10px',
-    'gridRowGap': '10px',
-    'gridTemplateColumns': '',
-    'gridTemplateRows': '',
-    'gridTemplateAreas': '',
-    'justifyItems': '',
-    'alignItems': '',
-    'justifyContent': '',
-    'alignContent': ''
-  },
-  nodes: [
-    {
-      text: 'div',
-      id: Date.now()
-    }
-  ]
-};
+import initialState from './initialState';
 
 const settings = (state = initialState.settings, action) => {
   switch (action.type) {
