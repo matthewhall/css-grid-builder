@@ -28,9 +28,14 @@ class NodeList extends Component {
     console.log('node click');
   }
 
-  handleNodeDeleteClick(event) {
+  handleNodeDeleteClick(event, id) {
     event.stopPropagation();
-    console.log('node delete click');
+
+    let index = this.props.nodes.findIndex((node) => {
+      return node.id === Number(id);
+    });
+
+    this.props.removeNodeAtIndex(index);
   }
 
   render() {
@@ -38,8 +43,9 @@ class NodeList extends Component {
 
     return (
       <div className="node-list" style={this.props.settings}>
-        {this.props.nodes.map((node, index) => (
-          <Node key={node.id.toString()}
+        {this.props.nodes.map((node) => (
+          <Node id={node.id.toString()}
+              key={node.id.toString()}
               text={node.text}
               onClick={this.handleNodeClick}
               onDeleteButtonClick={this.handleNodeDeleteClick} />

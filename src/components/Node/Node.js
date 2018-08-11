@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 
 class Node extends Component {
   render() {
-    const { text, onClick, onDeleteButtonClick } = this.props;
+    const { text, id, onClick, onDeleteButtonClick } = this.props;
 
     return (
       <div className="node-list__node"
           onClick={onClick}>
         <button className="node-list__node-delete-button"
-            onClick={($event) => onDeleteButtonClick($event)}>+</button>
+            onClick={($event) => onDeleteButtonClick($event, id)}>+</button>
         {text}
       </div>
     );
