@@ -9,7 +9,7 @@ class NodeList extends Component {
     super(props);
 
     this.handleNodeClick = this.handleNodeClick.bind(this);
-    this.handleNodeDeleteClick = this.handleNodeDeleteClick.bind(this);
+    this.handleDeleteNodeClick = this.handleDeleteNodeClick.bind(this);
   }
 
   handleAddNodeClick() {
@@ -28,10 +28,10 @@ class NodeList extends Component {
     console.log('node click');
   }
 
-  handleNodeDeleteClick(event, id) {
+  handleDeleteNodeClick(event, id) {
     event.stopPropagation();
 
-    let index = this.props.nodes.findIndex((node) => {
+    const index = this.props.nodes.findIndex((node) => {
       return node.id === id;
     });
 
@@ -48,7 +48,7 @@ class NodeList extends Component {
               key={node.id.toString()}
               text={node.text}
               onClick={this.handleNodeClick}
-              onDeleteButtonClick={this.handleNodeDeleteClick} />
+              onDeleteButtonClick={this.handleDeleteNodeClick} />
         ))}
         <button onClick={() => this.handleAddNodeClick()}
             className="node-list__add-node"
