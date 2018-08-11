@@ -32,7 +32,7 @@ class NodeList extends Component {
     event.stopPropagation();
 
     let index = this.props.nodes.findIndex((node) => {
-      return node.id === Number(id);
+      return node.id === id;
     });
 
     this.props.removeNodeAtIndex(index);
@@ -44,7 +44,7 @@ class NodeList extends Component {
     return (
       <div className="node-list" style={this.props.settings}>
         {this.props.nodes.map((node) => (
-          <Node id={node.id.toString()}
+          <Node id={node.id}
               key={node.id.toString()}
               text={node.text}
               onClick={this.handleNodeClick}
