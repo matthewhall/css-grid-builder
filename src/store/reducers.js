@@ -4,10 +4,21 @@ import {
   ADD_NODE_AT_INDEX,
   REMOVE_NODE_AT_INDEX,
   SET_SETTINGS_DISPLAY_VALUE,
-  SET_CORE_GRID_SETTINGS_CSS_VALUES
+  SET_CORE_GRID_SETTINGS_CSS_VALUES,
+  TOGGLE_SIDE_PANEL_OPEN
 } from './actionTypes';
 
 import initialState from './initialState';
+
+const sidePanel = (state = initialState.sidePanel, action) => {
+  switch (action.type) {
+    case TOGGLE_SIDE_PANEL_OPEN:
+      return Object.assign({}, { open: action.value });
+
+    default:
+      return state;
+  }
+}
 
 const settings = (state = initialState.settings, action) => {
   switch (action.type) {
@@ -46,5 +57,6 @@ const nodes = (state = initialState.nodes, action) => {
 
 export default combineReducers({
   nodes,
-  settings
+  settings,
+  sidePanel
 })

@@ -1,4 +1,9 @@
 .main-content {
   position: relative;
-  margin-left: 420px;
+  margin-left: 10px;
+  transition: margin-left .3s cubic-bezier(.4, 0, .2, 1);
+
+  .side-panel.is-open + & {
+    margin-left: 450px;
+  }
 }

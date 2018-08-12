@@ -16,5 +16,8 @@ export default {
       text: 'div',
       id: Date.now()
     }
-  ]
+  ],
+  sidePanel: {
+    open: true
+  }
 };

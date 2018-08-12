@@ -2,7 +2,8 @@ import {
   ADD_NODE_AT_INDEX,
   SET_SETTINGS_DISPLAY_VALUE,
   REMOVE_NODE_AT_INDEX,
-  SET_CORE_GRID_SETTINGS_CSS_VALUES
+  SET_CORE_GRID_SETTINGS_CSS_VALUES,
+  TOGGLE_SIDE_PANEL_OPEN
 } from './actionTypes';
 
 export const setSettingsDisplayValue = (value) => {
@@ -19,4 +20,8 @@ export const addNodeAtIndex = (nodeData) => {
 
 export const removeNodeAtIndex = (index) => {
   return { type: REMOVE_NODE_AT_INDEX, index };
+}
+
+export const toggleSidePanelOpen = (value) => {
+  return { type: TOGGLE_SIDE_PANEL_OPEN, value };
 }
