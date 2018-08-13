@@ -18,6 +18,21 @@ label {
   text-transform: uppercase;
 }
 
+.field-group {
+  &.field-group-rows {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &.field-group-rows-2-col {
+    .field {
+      flex-basis: 46%;
+      width: 46%;
+    }
+  }
+}
+
 .field {
   margin-bottom: 10px;
 

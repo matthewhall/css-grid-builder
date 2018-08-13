@@ -48,68 +48,70 @@ class CoreSettings extends Component {
           </div>
 
           <fieldset ref="coreSettings">
-            <CoreSettingsField id="grid-column-gap"
-                label="Grid Column Gap"
-                name="gridColumnGap"
-                type="text"
-                value={this.props.settings['gridColumnGap']}
-                onChange={this.handleCoreSettingsChange} />
+            <div className="field-group field-group-rows field-group-rows-2-col">
+              <CoreSettingsField id="grid-column-gap"
+                  label="Grid Column Gap"
+                  name="gridColumnGap"
+                  type="text"
+                  value={this.props.settings['gridColumnGap']}
+                  onChange={this.handleCoreSettingsChange} />
 
-            <CoreSettingsField id="grid-row-gap"
-                label="Grid Row Gap"
-                name="gridRowGap"
-                type="text"
-                value={this.props.settings['gridRowGap']}
-                onChange={this.handleCoreSettingsChange} />
+              <CoreSettingsField id="grid-row-gap"
+                  label="Grid Row Gap"
+                  name="gridRowGap"
+                  type="text"
+                  value={this.props.settings['gridRowGap']}
+                  onChange={this.handleCoreSettingsChange} />
 
-            <CoreSettingsField id="grid-template-columns"
-                label="Grid template columns"
-                name="gridTemplateColumns"
-                type="text"
-                value={this.props.settings['gridTemplateColumns']}
-                onChange={this.handleCoreSettingsChange} />
+              <CoreSettingsField id="grid-template-columns"
+                  label="Grid template columns"
+                  name="gridTemplateColumns"
+                  type="text"
+                  value={this.props.settings['gridTemplateColumns']}
+                  onChange={this.handleCoreSettingsChange} />
 
-            <CoreSettingsField id="grid-template-rows"
-                label="Grid template rows"
-                name="gridTemplateRows"
-                type="text"
-                value={this.props.settings['gridTemplateRows']}
-                onChange={this.handleCoreSettingsChange} />
+              <CoreSettingsField id="grid-template-rows"
+                  label="Grid template rows"
+                  name="gridTemplateRows"
+                  type="text"
+                  value={this.props.settings['gridTemplateRows']}
+                  onChange={this.handleCoreSettingsChange} />
 
-            <CoreSettingsField id="grid-template-areas"
-                label="Grid template areas"
-                name="gridTemplateAreas"
-                type="text"
-                value={this.props.settings['gridTemplateAreas']}
-                onChange={this.handleCoreSettingsChange} />
+              <CoreSettingsField id="grid-template-areas"
+                  label="Grid template areas"
+                  name="gridTemplateAreas"
+                  type="text"
+                  value={this.props.settings['gridTemplateAreas']}
+                  onChange={this.handleCoreSettingsChange} />
 
-            <CoreSettingsField id="justify-items"
-                label="Justify items"
-                name="justifyItems"
-                type="text"
-                value={this.props.settings['justifyItems']}
-                onChange={this.handleCoreSettingsChange} />
+              <CoreSettingsField id="justify-items"
+                  label="Justify items"
+                  name="justifyItems"
+                  type="text"
+                  value={this.props.settings['justifyItems']}
+                  onChange={this.handleCoreSettingsChange} />
 
-            <CoreSettingsField id="align-items"
-                label="Align items"
-                name="alignItems"
-                type="text"
-                value={this.props.settings['alignItems']}
-                onChange={this.handleCoreSettingsChange} />
+              <CoreSettingsField id="align-items"
+                  label="Align items"
+                  name="alignItems"
+                  type="text"
+                  value={this.props.settings['alignItems']}
+                  onChange={this.handleCoreSettingsChange} />
 
-            <CoreSettingsField id="justify-content"
-                label="Justify content"
-                name="justifyContent"
-                type="text"
-                value={this.props.settings['justifyContent']}
-                onChange={this.handleCoreSettingsChange} />
+              <CoreSettingsField id="justify-content"
+                  label="Justify content"
+                  name="justifyContent"
+                  type="text"
+                  value={this.props.settings['justifyContent']}
+                  onChange={this.handleCoreSettingsChange} />
 
-            <CoreSettingsField id="align-content"
-                label="Align content"
-                name="alignContent"
-                type="text"
-                value={this.props.settings['alignContent']}
-                onChange={this.handleCoreSettingsChange} />
+              <CoreSettingsField id="align-content"
+                  label="Align content"
+                  name="alignContent"
+                  type="text"
+                  value={this.props.settings['alignContent']}
+                  onChange={this.handleCoreSettingsChange} />
+            </div>
           </fieldset>
         </form>
       </div>
