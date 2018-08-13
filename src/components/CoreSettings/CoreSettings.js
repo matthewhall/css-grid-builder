@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import CoreSettingsField from './CoreSettingsField';
 
+import { GRID_TYPES } from '@/constants';
+
 import './CoreSettings.scss';
 
 class CoreSettings extends Component {
@@ -11,12 +13,10 @@ class CoreSettings extends Component {
   }
 
   handleEnabledChange(event) {
-    let value;
+    let value = GRID_TYPES.grid;
 
     if (event.target.checked) {
-      value = 'inline-grid';
-    } else {
-      value = 'grid';
+      value = GRID_TYPES.inline;
     }
 
     this.props.setNodeListDisplayStyle(value);
