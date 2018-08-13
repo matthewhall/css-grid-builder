@@ -9,10 +9,11 @@ textarea {
   color: inherit;
   font-family: 'Overpass Mono', monospace;
   font-size: 12px;
+}
 
+input {
   &[type='text'],
-  &[type='number'],
-  & {
+  &[type='number'] {
     padding: 6px;
     border: 1px solid #ccc;
     box-sizing: border-box;
