@@ -23,8 +23,8 @@ input {
     }
 
     &:focus {
-      border-color: rgb(170, 170, 170);
-      box-shadow: 0 0 0 0.2em rgba(0, 0, 0, .075);
+      border-color: #1779cf;
+      box-shadow: 0 0 0 0.2em rgba(23, 120, 208, 0.15);
       outline: none;
     }
   }
