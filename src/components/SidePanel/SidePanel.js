@@ -26,7 +26,7 @@ class SidePanel extends Component {
 
     return (
       <section className={'side-panel' + (open ? ' is-open' : '')}
-          aria-expanded={open.toString()}
+          aria-expanded={open}
           id="side-panel">
         <div className="side-panel__wrapper">
           <header className="main-heading">

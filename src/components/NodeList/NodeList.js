@@ -43,7 +43,7 @@ class NodeList extends Component {
       <div className="node-list" style={this.props.settings}>
         {this.props.nodes.map((node) => (
           <Node id={node.id}
-              key={node.id.toString()}
+              key={node.id}
               text={node.text}
               onClick={this.handleNodeClick}
               onDeleteButtonClick={this.handleDeleteNodeClick} />
