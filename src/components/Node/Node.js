@@ -2,29 +2,12 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 class Node extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      editingText: false
-    };
-  }
-
-  handleDoubleClick() {
-    console.log('double click');
-    this.setState({
-      editingText: true
-    });
-  }
-
   render() {
     const { text, id, onClick, onDeleteButtonClick } = this.props;
 
     return (
       <div className="node-list__node"
-          onClick={onClick}
-          onDoubleClick={() => this.handleDoubleClick()}
-          contentEditable={this.state.editingText}>
+          onClick={onClick}>
         <button className="node-list__node-delete-button"
             onClick={($event) => onDeleteButtonClick($event, id)}>+</button>
         {text}
