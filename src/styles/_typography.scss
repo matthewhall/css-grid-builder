@@ -5,4 +5,12 @@ h4,
 h5,
 h6 {
   font-family: 'Montserrat', 'Open Sans', Arial, sans-serif;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }

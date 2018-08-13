@@ -14,12 +14,15 @@
     transform: translateX(0);
   }
 
-  &__content {
-    box-sizing: border-box;
+  &__wrapper {
     height: 100%;
     overflow-y: auto;
-    padding: 40px;
     width: 100%;
+  }
+
+  &__content {
+    box-sizing: border-box;
+    padding: 30px;
   }
 
   &__section {
@@ -48,15 +51,15 @@
 }
 
 .main-heading {
-  margin-bottom: 40px;
+  border-bottom: 1px solid #ddd;
+  padding: 20px 30px;
 }
 
 .main-heading > h1 {
   font-size: 1.143rem;
-  margin-bottom: 20px;
+  margin-bottom: 0;
   margin-top: 0;
   position: relative;
-  text-align: center;
   text-transform: uppercase;
 }
 

@@ -28,29 +28,28 @@ class SidePanel extends Component {
       <section className={'side-panel' + (open ? ' is-open' : '')}
           aria-expanded={open.toString()}
           id="side-panel">
-        <div className="side-panel__content">
+        <div className="side-panel__wrapper">
           <header className="main-heading">
             <h1>CSS Grid Builder</h1>
-            <div className="main-heading__logo">
-
-            </div>
           </header>
-          <div className="side-panel__section">
-            <CoreSettingsContainer />
+          <div className="side-panel__content">
+            <div className="side-panel__section">
+              <CoreSettingsContainer />
+            </div>
+            <div className="side-panel__section">
+              <AboutInfo />
+            </div>
+            <div className="side-panel__section">
+              <ReferenceInfo />
+            </div>
           </div>
-          <div className="side-panel__section">
-            <AboutInfo />
-          </div>
-          <div className="side-panel__section">
-            <ReferenceInfo />
-          </div>
-        </div>
 
-        <button className="side-panel__toggle-button"
-            aria-controls="side-panel"
-            aria-label={open ? this.text.toggleAriaLabelOpen : this.text.toggleAriaLabelClosed}
-            onClick={() => this.handleToggleButtonClick()}
-            title={open ? this.text.toggleAriaLabelOpen : this.text.toggleAriaLabelClosed}></button>
+          <button className="side-panel__toggle-button"
+              aria-controls="side-panel"
+              aria-label={open ? this.text.toggleAriaLabelOpen : this.text.toggleAriaLabelClosed}
+              onClick={() => this.handleToggleButtonClick()}
+              title={open ? this.text.toggleAriaLabelOpen : this.text.toggleAriaLabelClosed}></button>
+        </div>
       </section>
     )
   }
