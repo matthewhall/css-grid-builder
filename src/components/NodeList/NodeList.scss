@@ -52,6 +52,10 @@
     transform: rotate(45deg);
     transition: opacity .2s;
     width: 15px;
+
+    &:focus {
+      opacity: 1;
+    }
   }
 
   &__add-node {

@@ -7,8 +7,10 @@ class Node extends Component {
 
     return (
       <div className="node-list__node"
+          tabIndex="0"
           onClick={onClick}>
         <button className="node-list__node-delete-button"
+            aria-label="Delete node"
             onClick={($event) => onDeleteButtonClick($event, id)}>+</button>
         {text}
       </div>
