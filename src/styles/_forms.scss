@@ -11,22 +11,21 @@ textarea {
   font-size: 12px;
 }
 
-input {
-  &[type='text'],
-  &[type='number'] {
-    padding: 6px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
+input[type='text'],
+input[type='number'],
+textarea {
+  padding: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
 
-    &:hover {
-      border-color: rgb(170, 170, 170);
-    }
+  &:hover {
+    border-color: rgb(170, 170, 170);
+  }
 
-    &:focus {
-      border-color: #1779cf;
-      box-shadow: 0 0 0 0.2em rgba(23, 120, 208, 0.15);
-      outline: none;
-    }
+  &:focus {
+    border-color: #1779cf;
+    box-shadow: 0 0 0 0.2em rgba(23, 120, 208, 0.15);
+    outline: none;
   }
 }
 
