@@ -8,6 +8,14 @@ import ReferenceInfo from '../ReferenceInfo';
 import './SidePanel.scss';
 
 class SidePanel extends Component {
+  static propTypes = {
+    open: PropTypes.bool.isRequired
+  }
+
+  static defaultProps = {
+    open: true
+  }
+
   constructor(props) {
     super(props);
 
@@ -54,13 +62,5 @@ class SidePanel extends Component {
     )
   }
 }
-
-SidePanel.defaultProps = {
-  open: true
-};
-
-SidePanel.propTypes = {
-  open: PropTypes.bool
-};
 
 export default SidePanel

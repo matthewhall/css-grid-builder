@@ -2,6 +2,19 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 class CoreSettingsField extends Component {
+  static propTypes = {
+    id: PropTypes.string.isRequired,
+    label: PropTypes.string,
+    name: PropTypes.string.isRequired,
+    onChange: PropTypes.func,
+    type: PropTypes.string.isRequired,
+    value: PropTypes.string
+  }
+
+  static defaultProps = {
+    type: 'text'
+  }
+
   render() {
     const { id, label, type, name, value, onChange } = this.props;
 
@@ -17,18 +30,5 @@ class CoreSettingsField extends Component {
     );
   }
 }
-
-CoreSettingsField.defaultProps = {
-  type: 'text'
-};
-
-CoreSettingsField.propTypes = {
-  id: PropTypes.string.isRequired,
-  label: PropTypes.string,
-  name: PropTypes.string.isRequired,
-  onChange: PropTypes.func,
-  type: PropTypes.string.isRequired,
-  value: PropTypes.string
-};
 
 export default CoreSettingsField;

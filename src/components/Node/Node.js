@@ -2,6 +2,16 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 class Node extends Component {
+  static propTypes = {
+    text: PropTypes.string,
+    onClick: PropTypes.func,
+    onDeleteButtonClick: PropTypes.func
+  }
+
+  static defaultProps = {
+    text: 'div'
+  }
+
   render() {
     const { text, id, onClick, onDeleteButtonClick } = this.props;
 
@@ -17,15 +27,5 @@ class Node extends Component {
     );
   }
 }
-
-Node.defaultProps = {
-  text: 'div'
-};
-
-Node.propTypes = {
-  text: PropTypes.string,
-  onClick: PropTypes.func,
-  onDeleteButtonClick: PropTypes.func
-};
 
 export default Node;

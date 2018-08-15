@@ -26,7 +26,10 @@ const config = {
         loader: 'babel-loader',
         exclude: /node_modules/,
         options: {
-          presets: ['react']
+          presets: [
+            'react',
+            'stage-2'
+          ]
         }
       },
       {
