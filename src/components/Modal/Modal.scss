@@ -1,0 +1,25 @@
+.modal {
+  &__backdrop {
+    background-color: rgba(7, 35, 60, .4);
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 100;
+  }
+
+  &__content {
+    background-clip: padding-box;
+    background-color: $color-white;
+    border: 10px solid rgba(13, 66, 113, .3);
+    left: 50%;
+    min-width: 420px;
+    padding: 20px;
+    pointer-events: initial;
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 200;
+  }
+}

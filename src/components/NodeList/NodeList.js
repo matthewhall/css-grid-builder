@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import Node from '../Node';
+import Modal from '../Modal';
 
 import './NodeList.scss';
 
@@ -10,6 +12,10 @@ class NodeList extends Component {
 
     this.handleNodeClick = this.handleNodeClick.bind(this);
     this.handleDeleteNodeClick = this.handleDeleteNodeClick.bind(this);
+
+    this.state = {
+      isModalOpen: false
+    };
   }
 
   handleAddNodeClick() {
@@ -25,7 +31,9 @@ class NodeList extends Component {
   }
 
   handleNodeClick() {
-    console.log('node click');
+    this.setState({
+      isModalOpen: true
+    });
   }
 
   handleDeleteNodeClick(event, id) {
@@ -52,6 +60,13 @@ class NodeList extends Component {
             className="node-list__add-node"
             aria-label={addNodeText}
             title={addNodeText}>+</button>
+        <Modal isOpen={this.state.isModalOpen}>
+          <h2>Hello!</h2>
+          <div className="field">
+            <textarea />
+            <button onClick={() => this.setState({ isModalOpen: false })}>Close modal</button>
+          </div>
+        </Modal>
       </div>
     );
   }
