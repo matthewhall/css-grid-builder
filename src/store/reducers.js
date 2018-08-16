@@ -38,17 +38,22 @@ const settings = (state = initialState.settings, action) => {
 const nodes = (state = initialState.nodes, action) => {
   switch (action.type) {
     case ADD_NODE_AT_INDEX:
-      return [
-        ...state.slice(0, action.nodeData.index),
-        action.nodeData.node,
-        ...state.slice(action.nodeData.index + 1)
-      ];
+      return Object.assign({}, state, {
+        lastNodeId: action.nodeData.node.id,
+        allNodes: [
+          ...state.allNodes.slice(0, action.nodeData.index),
+          action.nodeData.node,
+          ...state.allNodes.slice(action.nodeData.index + 1)
+        ]
+      });
 
     case REMOVE_NODE_AT_INDEX:
-      return [
-        ...state.slice(0, action.index),
-        ...state.slice(action.index + 1)
-      ];
+      return Object.assign({}, state, {
+        allNodes: [
+          ...state.allNodes.slice(0, action.index),
+          ...state.allNodes.slice(action.index + 1)
+        ]
+      });
 
     default:
       return state;

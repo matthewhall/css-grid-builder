@@ -25,7 +25,7 @@ class NodeList extends Component {
       index: index - 1,
       node: {
         text: 'div',
-        id: Date.now()
+        id: this.props.lastNodeId + 1
       }
     });
   }

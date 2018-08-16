@@ -17,6 +17,7 @@ class Node extends Component {
 
     return (
       <div className="node-list__node"
+          data-id={id}
           tabIndex="0"
           onClick={onClick}>
         <button className="node-list__node-delete-button"

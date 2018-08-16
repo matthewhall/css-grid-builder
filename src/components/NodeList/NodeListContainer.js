@@ -8,7 +8,8 @@ import {
 } from '@/store/actions';
 
 const mapStateToProps = (state) => ({
-  nodes: state.nodes,
+  lastNodeId: state.nodes.lastNodeId,
+  nodes: state.nodes.allNodes,
   settings: state.settings
 })
 

@@ -11,12 +11,15 @@ export default {
     'justifyContent': '',
     'alignContent': ''
   },
-  nodes: [
-    {
-      text: 'div',
-      id: Date.now()
-    }
-  ],
+  nodes: {
+    lastNodeId: 0,
+    allNodes: [
+      {
+        text: 'div',
+        id: 0
+      }
+    ]
+  },
   sidePanel: {
     open: true
   }
