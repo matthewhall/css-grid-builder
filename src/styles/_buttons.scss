@@ -1,0 +1,20 @@
+.button {
+  background-color: #999;
+  border-radius: 3px;
+  border: 0;
+  color: $color-white;
+  cursor: pointer;
+  font-weight: 700;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  transition: background-color .2s;
+
+  &--primary {
+    background-color: #40ab61;
+
+    &:focus,
+    &:hover {
+      background-color: darken(#40ab61, 5%);
+    }
+  }
+}
