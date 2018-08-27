@@ -51,7 +51,9 @@ class NodeList extends Component {
       <div className="node-list" style={this.props.settings}>
         {this.props.nodes.map((node) => (
           <Node id={node.id}
+              className={node.className}
               key={node.id}
+              styles={node.styles}
               text={node.text}
               onClick={this.handleNodeClick}
               onDeleteButtonClick={this.handleDeleteNodeClick} />
@@ -60,12 +62,11 @@ class NodeList extends Component {
             className="node-list__add-node"
             aria-label={addNodeText}
             title={addNodeText}>+</button>
+
         <Modal isOpen={this.state.isModalOpen}>
-          <h2>Hello!</h2>
-          <div className="field">
-            <textarea />
-            <button onClick={() => this.setState({ isModalOpen: false })}>Close modal</button>
-          </div>
+          <NodeSettings nodeData={this.state.editingNode}
+              onStyleChange={this.handleNodeStyleChange} />
+          <button onClick={() => this.setState({ isModalOpen: false}) }>Close modal</button>
         </Modal>
       </div>
     );
