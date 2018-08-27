@@ -3,6 +3,7 @@ import {
   SET_SETTINGS_DISPLAY_VALUE,
   REMOVE_NODE_AT_INDEX,
   SET_CORE_GRID_SETTINGS_CSS_VALUES,
+  SET_NODE_GRID_STYLE,
   TOGGLE_SIDE_PANEL_OPEN
 } from './actionTypes';
 
@@ -20,6 +21,10 @@ export const addNodeAtIndex = (nodeData) => {
 
 export const removeNodeAtIndex = (index) => {
   return { type: REMOVE_NODE_AT_INDEX, index };
+}
+
+export const setNodeGridStyle = (id, prop, value) => {
+  return { type: SET_NODE_GRID_STYLE, id, prop, value };
 }
 
 export const toggleSidePanelOpen = (value) => {

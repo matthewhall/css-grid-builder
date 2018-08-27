@@ -5,6 +5,7 @@ import {
   REMOVE_NODE_AT_INDEX,
   SET_SETTINGS_DISPLAY_VALUE,
   SET_CORE_GRID_SETTINGS_CSS_VALUES,
+  SET_NODE_GRID_STYLE,
   TOGGLE_SIDE_PANEL_OPEN
 } from './actionTypes';
 
@@ -49,10 +50,20 @@ const nodes = (state = initialState.nodes, action) => {
 
     case REMOVE_NODE_AT_INDEX:
       return Object.assign({}, state, {
-        allNodes: [
-          ...state.allNodes.slice(0, action.index),
-          ...state.allNodes.slice(action.index + 1)
-        ]
+        allNodes: state.allNodes.filter((item, index) => index !== action.index)
+      });
+
+    case SET_NODE_GRID_STYLE:
+      const index = state.allNodes.findIndex((node) => node.id === action.id);
+      let item = Object.assign({}, state.allNodes[index], {
+        styles: {
+          ...state.allNodes[index].styles,
+          [action.prop]: action.value
+        }
+      });
+
+      return Object.assign({}, state, {
+        allNodes: Object.assign([], item, { [index]: item })
       });
 
     default:
