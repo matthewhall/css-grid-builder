@@ -4,7 +4,8 @@ import NodeList from './NodeList';
 
 import {
   addNodeAtIndex,
-  removeNodeAtIndex
+  removeNodeAtIndex,
+  setNodeGridStyle
 } from '@/store/actions';
 
 const mapStateToProps = (state) => ({
@@ -15,7 +16,8 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   addNodeAtIndex: (nodeData) => dispatch(addNodeAtIndex(nodeData)),
-  removeNodeAtIndex: (index) => dispatch(removeNodeAtIndex(index))
+  removeNodeAtIndex: (index) => dispatch(removeNodeAtIndex(index)),
+  setNodeGridStyle: (id, prop, value) => dispatch(setNodeGridStyle(id, prop, value))
 })
 
 export default connect(
